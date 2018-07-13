@@ -1,2 +1,26 @@
 # lxd_exporter
-Sample LXD Exporter for prometheus.io
+Sample LXD Exporter for prometheus.io (Note: Do not run in Production!)
+
+Works on Ubuntu 16.04 for lxd installed from feature branch
+~~~
+# apt install -t xenial-backports lxd lxd-client
+# apt install python-minimal python-pip
+~~~
+
+Install Python Dependencies
+~~~
+pip install prometheus_client
+pip install pylxd
+pip install psutil
+~~~
+
+Clone Repository and run exporter
+~~~
+# git clone https://github.com/viveksing/lxd_exporter.git
+# cd lxd_exporter
+# python lxdprom.py
+~~~
+
+Listens on port 8000
+
+Also Included LXD Grafana Dashboard in grafana-lxd.json 
